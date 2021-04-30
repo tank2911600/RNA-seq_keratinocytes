@@ -1,0 +1,1264 @@
+Code for RNA-seq analysis of keloid keratinocytes and normal keratinocytes (large dataset)
+
+zhenjun@MDHS-NIX-029[zhenjun] cd /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata
+zhenjun@MDHS-NIX-029[Rawdata] cat K8_HFLH3DRXX_TGGTGGCA-TCCTGTAA_L001_R1.fastq.gz K8_HFLH3DRXX_TGGTGGCA-TCCTGTAA_L002_R1.fastq.gz > KK_8.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat K9_HFLH3DRXX_AGGCAGAG-AGAATGCC_L001_R1.fastq.gz K9_HFLH3DRXX_AGGCAGAG-AGAATGCC_L002_R1.fastq.gz > KK_9.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat N4_HFLH3DRXX_ATATCTCG-ATCTTAGT_L001_R1.fastq.gz N4_HFLH3DRXX_ATATCTCG-ATCTTAGT_L002_R1.fastq.gz > NK_4.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat N5_HFLH3DRXX_GCGCTCTA-GCTCCGAC_L001_R1.fastq.gz N5_HFLH3DRXX_GCGCTCTA-GCTCCGAC_L002_R1.fastq.gz > NK_5.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat N6_HFLH3DRXX_AACAGGTT-ATACCAAG_L001_R1.fastq.gz N6_HFLH3DRXX_AACAGGTT-ATACCAAG_L002_R1.fastq.gz > NK_6.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat N7_HFLH3DRXX_GGTGAACC-GCGTTGGA_L001_R1.fastq.gz N7_HFLH3DRXX_GGTGAACC-GCGTTGGA_L002_R1.fastq.gz > NK_7.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cat N8_HFLH3DRXX_CAACAATG-CTTCACGG_L001_R1.fastq.gz N8_HFLH3DRXX_CAACAATG-CTTCACGG_L002_R1.fastq.gz > NK_8.fastq.gz
+zhenjun@MDHS-NIX-029[Rawdata] cd /data2/zhenjun                       [ 1:23PM]
+zhenjun@MDHS-NIX-029[zhenjun] chmod a+x ./fastp                       [11:16AM]
+zhenjun@MDHS-NIX-029[zhenjun] for ((i=8;i<=9;i++));do ./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/KK_${i}.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_${i}_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_${i}.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_${i}.json;done
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 32464459
+total bases: 3246445900
+Q20 bases: 3223209065(99.2842%)
+Q30 bases: 3161874494(97.395%)
+
+Read1 after filtering:
+total reads: 32445307
+total bases: 2735207538
+Q20 bases: 2715409215(99.2762%)
+Q30 bases: 2661860427(97.3184%)
+
+Filtering result:
+reads passed filter: 32445307
+reads failed due to low quality: 16597
+reads failed due to too many N: 1294
+reads failed due to too short: 1261
+reads with adapter trimmed: 1519859
+bases trimmed due to adapters: 22645776
+
+Duplication rate (may be overestimated since this is SE data): 48.9993%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_8.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_8.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/KK_8.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_8_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_8.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_8.json 
+fastp v0.20.0, time used: 132 seconds
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 30775269
+total bases: 3077526900
+Q20 bases: 3056491273(99.3165%)
+Q30 bases: 3000648507(97.5019%)
+
+Read1 after filtering:
+total reads: 30757788
+total bases: 2591683569
+Q20 bases: 2573863546(99.3124%)
+Q30 bases: 2525253795(97.4368%)
+
+Filtering result:
+reads passed filter: 30757788
+reads failed due to low quality: 15569
+reads failed due to too many N: 762
+reads failed due to too short: 1150
+reads with adapter trimmed: 1523908
+bases trimmed due to adapters: 22701802
+
+Duplication rate (may be overestimated since this is SE data): 46.889%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_9.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_9.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/KK_9.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_9_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_9.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_9.json 
+fastp v0.20.0, time used: 127 seconds
+zhenjun@MDHS-NIX-029[zhenjun] for ((i=4;i<=8;i++));do ./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_${i}.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_${i}_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_${i}.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_${i}.json;done
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 34235585
+total bases: 3423558500
+Q20 bases: 3398749741(99.2754%)
+Q30 bases: 3334603590(97.4017%)
+
+Read1 after filtering:
+total reads: 34214896
+total bases: 2872623781
+Q20 bases: 2851400602(99.2612%)
+Q30 bases: 2795414738(97.3122%)
+
+Filtering result:
+reads passed filter: 34214896
+reads failed due to low quality: 17002
+reads failed due to too many N: 1442
+reads failed due to too short: 2245
+reads with adapter trimmed: 2210232
+bases trimmed due to adapters: 35689364
+
+Duplication rate (may be overestimated since this is SE data): 46.5595%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_4.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_4.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_4.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_4_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_4.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_4.json 
+fastp v0.20.0, time used: 140 seconds
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 32196690
+total bases: 3219669000
+Q20 bases: 3195808855(99.2589%)
+Q30 bases: 3134105769(97.3425%)
+
+Read1 after filtering:
+total reads: 32177874
+total bases: 2711935071
+Q20 bases: 2691528003(99.2475%)
+Q30 bases: 2637644552(97.2606%)
+
+Filtering result:
+reads passed filter: 32177874
+reads failed due to low quality: 16221
+reads failed due to too many N: 1289
+reads failed due to too short: 1306
+reads with adapter trimmed: 1517670
+bases trimmed due to adapters: 23192527
+
+Duplication rate (may be overestimated since this is SE data): 48.7087%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_5.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_5.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_5.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_5_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_5.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_5.json 
+fastp v0.20.0, time used: 134 seconds
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 35516948
+total bases: 3551694800
+Q20 bases: 3526329942(99.2858%)
+Q30 bases: 3461658418(97.465%)
+
+Read1 after filtering:
+total reads: 35491963
+total bases: 2986325221
+Q20 bases: 2964845458(99.2807%)
+Q30 bases: 2908491398(97.3937%)
+
+Filtering result:
+reads passed filter: 35491963
+reads failed due to low quality: 21912
+reads failed due to too many N: 1446
+reads failed due to too short: 1627
+reads with adapter trimmed: 1997624
+bases trimmed due to adapters: 30482857
+
+Duplication rate (may be overestimated since this is SE data): 48.2107%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_6.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_6.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_6.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_6_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_6.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_6.json 
+fastp v0.20.0, time used: 147 seconds
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 31717744
+total bases: 3171774400
+Q20 bases: 3148609437(99.2697%)
+Q30 bases: 3088657055(97.3795%)
+
+Read1 after filtering:
+total reads: 31697944
+total bases: 2670443986
+Q20 bases: 2650723502(99.2615%)
+Q30 bases: 2598460245(97.3044%)
+
+Filtering result:
+reads passed filter: 31697944
+reads failed due to low quality: 17132
+reads failed due to too many N: 1253
+reads failed due to too short: 1415
+reads with adapter trimmed: 1600405
+bases trimmed due to adapters: 23888379
+
+Duplication rate (may be overestimated since this is SE data): 46.9728%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_7.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_7.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_7.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_7_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_7.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_7.json 
+fastp v0.20.0, time used: 133 seconds
+Detecting adapter sequence for read1...
+>Illumina TruSeq Adapter Read 1
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCA
+
+Read1 before filtering:
+total reads: 33272697
+total bases: 3327269700
+Q20 bases: 3303151209(99.2751%)
+Q30 bases: 3241943539(97.4356%)
+
+Read1 after filtering:
+total reads: 33250587
+total bases: 2801593333
+Q20 bases: 2781144551(99.2701%)
+Q30 bases: 2727913194(97.3701%)
+
+Filtering result:
+reads passed filter: 33250587
+reads failed due to low quality: 19210
+reads failed due to too many N: 1393
+reads failed due to too short: 1507
+reads with adapter trimmed: 1645241
+bases trimmed due to adapters: 24705654
+
+Duplication rate (may be overestimated since this is SE data): 47.3251%
+
+JSON report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_8.json
+HTML report: /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_8.html
+
+./fastp -i /data2/zhenjun/keloid_kerationcytes/second_dataset/Rawdata/NK_8.fastq.gz -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_8_trim.fastq.gz -f 15 -h /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_8.html -j /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_8.json 
+fastp v0.20.0, time used: 135 seconds
+zhenjun@MDHS-NIX-029[zhenjun] cd /data2/software/STAR/bin/Linux_x86_64
+zhenjun@MDHS-NIX-029[Linux_x86_64] for ((i=8;i<=9;i++));do ./STAR --genomeDir /data2/zhenjun/index_GRCh38.100 --runThreadN 10 --readFilesIn /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/KK_${i}_trim.fastq.gz --readFilesCommand zcat --outFileNamePrefix /data2/zhenjun/keloid_kerationcytes/second_dataset/STAR_aligner/KK_${i};done
+Dec 09 09:51:55 ..... started STAR run
+Dec 09 09:51:55 ..... loading genome
+Dec 09 09:52:09 ..... started mapping
+Dec 09 09:53:50 ..... finished mapping
+Dec 09 09:53:51 ..... finished successfully
+Dec 09 09:53:51 ..... started STAR run
+Dec 09 09:53:51 ..... loading genome
+Dec 09 09:54:16 ..... started mapping
+Dec 09 09:55:47 ..... finished mapping
+Dec 09 09:55:48 ..... finished successfully
+zhenjun@MDHS-NIX-029[Linux_x86_64] for ((i=4;i<=8;i++));do ./STAR --genomeDir /data2/zhenjun/index_GRCh38.100 --runThreadN 10 --readFilesIn /data2/zhenjun/keloid_kerationcytes/second_dataset/Fastp/NK_${i}_trim.fastq.gz --readFilesCommand zcat --outFileNamePrefix /data2/zhenjun/keloid_kerationcytes/second_dataset/STAR_aligner/NK_${i};done
+Dec 09 09:55:48 ..... started STAR run
+Dec 09 09:55:48 ..... loading genome
+Dec 09 09:55:58 ..... started mapping
+Dec 09 09:57:40 ..... finished mapping
+Dec 09 09:57:40 ..... finished successfully
+Dec 09 09:57:40 ..... started STAR run
+Dec 09 09:57:40 ..... loading genome
+Dec 09 09:57:51 ..... started mapping
+Dec 09 09:59:31 ..... finished mapping
+Dec 09 09:59:31 ..... finished successfully
+Dec 09 09:59:31 ..... started STAR run
+Dec 09 09:59:32 ..... loading genome
+Dec 09 09:59:42 ..... started mapping
+Dec 09 10:01:25 ..... finished mapping
+Dec 09 10:01:26 ..... finished successfully
+Dec 09 10:01:26 ..... started STAR run
+Dec 09 10:01:26 ..... loading genome
+Dec 09 10:01:36 ..... started mapping
+Dec 09 10:03:11 ..... finished mapping
+Dec 09 10:03:12 ..... finished successfully
+Dec 09 10:03:12 ..... started STAR run
+Dec 09 10:03:12 ..... loading genome
+Dec 09 10:03:22 ..... started mapping
+Dec 09 10:05:03 ..... finished mapping
+Dec 09 10:05:03 ..... finished successfully
+zhenjun@MDHS-NIX-029[Linux_x86_64] cd /data2/software/samtools        [10:05AM]
+zhenjun@MDHS-NIX-029[samtools] for ((i=8;i<=9;i++));do samtools view -bS /data2/zhenjun/keloid_kerationcytes/second_dataset/STAR_aligner/KK_${i}Aligned.out.sam -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/bam/KK_${i}.bam;done
+[samopen] SAM header is present: 194 sequences.
+[samopen] SAM header is present: 194 sequences.
+zhenjun@MDHS-NIX-029[samtools] for ((i=8;i<=9;i++));do samtools sort /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/bam/KK_${i}.bam /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/sorted/KK_${i}_sorted;done
+[bam_sort_core] merging from 16 files...
+[bam_sort_core] merging from 15 files...
+zhenjun@MDHS-NIX-029[samtools] for ((i=8;i<=9;i++));do samtools index /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/sorted/KK_${i}_sorted.bam;done
+zhenjun@MDHS-NIX-029[samtools]                                        [10:37AM]
+zhenjun@MDHS-NIX-029[samtools] for ((i=4;i<=8;i++));do samtools view -bS /data2/zhenjun/keloid_kerationcytes/second_dataset/STAR_aligner/NK_${i}Aligned.out.sam -o /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/bam/NK_${i}.bam;done
+[samopen] SAM header is present: 194 sequences.
+[samopen] SAM header is present: 194 sequences.
+[samopen] SAM header is present: 194 sequences.
+[samopen] SAM header is present: 194 sequences.
+[samopen] SAM header is present: 194 sequences.
+zhenjun@MDHS-NIX-029[samtools] for ((i=4;i<=8;i++));do samtools sort /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/bam/NK_${i}.bam /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/sorted/NK_${i}_sorted;done
+[bam_sort_core] merging from 17 files...
+[bam_sort_core] merging from 16 files...
+[bam_sort_core] merging from 18 files...
+[bam_sort_core] merging from 16 files...
+[bam_sort_core] merging from 16 files...
+zhenjun@MDHS-NIX-029[samtools] for ((i=4;i<=8;i++));do samtools index /data2/zhenjun/keloid_kerationcytes/second_dataset/Samtools/sorted/NK_${i}_sorted.bam;done
+
+> indir <- file.path("/data2/zhenjun/keloid_keratinocytes/second_dataset/Samtools/sorted")
+> list.files(indir) 
+ [1] "Homo_sapiens.GRCh38.100.gtf" "KK_1_sorted.bam"            
+ [3] "KK_2_sorted.bam"             "KK_3_sorted.bam"            
+ [5] "KK_4_sorted.bam"             "KK_5_sorted.bam"            
+ [7] "KK_6_sorted.bam"             "KK_7_sorted.bam"            
+ [9] "KK_8_sorted.bam"             "KK_8_sorted.bam.bai"        
+[11] "KK_9_sorted.bam"             "KK_9_sorted.bam.bai"        
+[13] "NK_1_sorted.bam"             "NK_2_sorted.bam"            
+[15] "NK_3_sorted.bam"             "NK_4_sorted.bam"            
+[17] "NK_4_sorted.bam.bai"         "NK_5_sorted.bam"            
+[19] "NK_5_sorted.bam.bai"         "NK_6_sorted.bam"            
+[21] "NK_6_sorted.bam.bai"         "NK_7_sorted.bam"            
+[23] "NK_7_sorted.bam.bai"         "NK_8_sorted.bam"            
+[25] "NK_8_sorted.bam.bai"         "sample.csv"                 
+> csvfile <- file.path(indir, "sample.csv")
+> sampleTable <- read.csv(csvfile, row.names = 1)
+> sampleTable
+      SampleName CellType SampleID    Sex BodySite          Enthnicity Age
+KK_1     AN08_KK   Keloid     KK_1   Male      Ear           Caucasian  42
+KK_2     MN01_KK   Keloid     KK_2 Female Shoulder           EastAsian  40
+KK_3   MaMa18_KK   Keloid     KK_3 Female    Chest      AfricaAmerican  27
+KK_4     WK16_KK   Keloid     KK_4   Male    Chest           EastAsian  29
+KK_5     KC10_KK   Keloid     KK_5   Male    Chest Caucasian_EastAsian  21
+KK_6     RK04_KK   Keloid     KK_6   Male    Chest           Caucasian  30
+KK_7     VT09_KK   Keloid     KK_7   Male    Chest           EastAsian  30
+KK_8 MaMa17_KK_C   Keloid     KK_8 Female    Chest      AfricaAmerican  27
+KK_9 MaMa17_KK_D   Keloid     KK_9 Female  Deltoid      AfricaAmerican  27
+NK_1      NS1_NK   Normal     NK_1 Female      Arm           Caucasian  35
+NK_2     JeTh_NK   Normal     NK_2 Female  Abdomen           Caucasian  51
+NK_3     SaMc_NK   Normal     NK_3 Female  Abdomen           Caucasian  35
+NK_4     ClRi NK   Normal     NK_4 Female  Abdomen           Caucasian  52
+NK_5    ChrCr NK   Normal     NK_5 Female  Abdomen           Caucasian  37
+NK_6     LeHa NK   Normal     NK_6 Female   Breast           Caucasian  54
+NK_7     EvMa NK   Normal     NK_7 Female  Abdomen           Caucasian  38
+NK_8     PaLa NK   Normal     NK_8 Female  Abdomen           Caucasian  76
+     AgeFactor  Batch
+KK_1       40s  First
+KK_2       40s  First
+KK_3       20s  First
+KK_4       20s  First
+KK_5       20s  First
+KK_6       30s  First
+KK_7       30s  First
+KK_8       20s Second
+KK_9       20s Second
+NK_1       30s  First
+NK_2       50s  First
+NK_3       30s  First
+NK_4       50s Second
+NK_5       30s Second
+NK_6       50s Second
+NK_7       30s Second
+NK_8       70s Second
+> filenames <- file.path(indir, paste0(sampleTable$SampleID,"_sorted.bam"))
+> file.exists(filenames)
+ [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
+[16] TRUE TRUE
+> library(Rsamtools)
+Loading required package: GenomeInfoDb
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: Biostrings
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+> bamfiles <- BamFileList(filenames, yieldSize=2000000)
+> seqinfo(bamfiles[1])
+Seqinfo object with 194 sequences from an unspecified genome:
+  seqnames   seqlengths isCircular genome
+  1           248956422       <NA>   <NA>
+  10          133797422       <NA>   <NA>
+  11          135086622       <NA>   <NA>
+  12          133275309       <NA>   <NA>
+  13          114364328       <NA>   <NA>
+  ...               ...        ...    ...
+  KI270539.1        993       <NA>   <NA>
+  KI270385.1        990       <NA>   <NA>
+  KI270423.1        981       <NA>   <NA>
+  KI270392.1        971       <NA>   <NA>
+  KI270394.1        970       <NA>   <NA>
+> library(GenomicFeatures)
+Loading required package: AnnotationDbi
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+> gtffile <- file.path(indir,"Homo_sapiens.GRCh38.100.gtf")
+> txdb <- makeTxDbFromGFF(gtffile, format="gtf", circ_seqs=character())
+Import genomic features from the file as a GRanges object ... OK
+Prepare the 'metadata' data frame ... OK
+Make the TxDb object ... OK
+Warning message:
+In .get_cds_IDX(mcols0$type, mcols0$phase) :
+  The "phase" metadata column contains non-NA values for features of type
+  stop_codon. This information was ignored.
+> txdb
+TxDb object:
+# Db type: TxDb
+# Supporting package: GenomicFeatures
+# Data source: /data2/zhenjun/keloid_keratinocytes/second_dataset/Samtools/sorted/Homo_sapiens.GRCh38.100.gtf
+# Organism: NA
+# Taxonomy ID: NA
+# miRBase build ID: NA
+# Genome: NA
+# transcript_nrow: 227954
+# exon_nrow: 747775
+# cds_nrow: 275213
+# Db created by: GenomicFeatures package from Bioconductor
+# Creation time: 2021-01-04 12:27:15 +0800 (Mon, 04 Jan 2021)
+# GenomicFeatures version at creation time: 1.38.0
+# RSQLite version at creation time: 2.1.2
+# DBSCHEMAVERSION: 1.2
+> ebg <- exonsBy(txdb, by="gene")
+> ebg
+GRangesList object of length 60683:
+$ENSG00000000003
+GRanges object with 20 ranges and 2 metadata columns:
+       seqnames              ranges strand |   exon_id       exon_name
+          <Rle>           <IRanges>  <Rle> | <integer>     <character>
+   [1]        X 100627108-100629986      - |    739975 ENSE00001459322
+   [2]        X 100627109-100629986      - |    739976 ENSE00003730948
+   [3]        X 100630759-100630866      - |    739977 ENSE00000868868
+   [4]        X 100632063-100632068      - |    739978 ENSE00003731560
+   [5]        X 100632485-100632568      - |    739979 ENSE00000401072
+   ...      ...                 ...    ... .       ...             ...
+  [16]        X 100635558-100635746      - |    739990 ENSE00003733424
+  [17]        X 100636191-100636689      - |    739991 ENSE00001886883
+  [18]        X 100636608-100636806      - |    739992 ENSE00001855382
+  [19]        X 100636793-100637104      - |    739993 ENSE00001863395
+  [20]        X 100639945-100639991      - |    739994 ENSE00001828996
+  -------
+  seqinfo: 47 sequences from an unspecified genome; no seqlengths
+
+...
+<60682 more elements>
+> library(GenomicAlignments)
+Loading required package: SummarizedExperiment
+Loading required package: DelayedArray
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: BiocParallel
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+> library(BiocParallel)
+> register(SerialParam())
+> se <- summarizeOverlaps(features=ebg, reads=bamfiles, mode="Union", singleEnd=TRUE, ignore.strand=TRUE)
+> se
+class: RangedSummarizedExperiment 
+dim: 60683 17 
+metadata(0):
+assays(1): counts
+rownames(60683): ENSG00000000003 ENSG00000000005 ... ENSG00000288603
+  ENSG00000288604
+rowData names(0):
+colnames(17): KK_1_sorted.bam KK_2_sorted.bam ... NK_7_sorted.bam
+  NK_8_sorted.bam
+colData names(0):
+> dim(se)
+[1] 60683    17
+> assayNames(se)
+[1] "counts"
+> head(assay(se), 3)
+                KK_1_sorted.bam KK_2_sorted.bam KK_3_sorted.bam KK_4_sorted.bam
+ENSG00000000003             720             604             875             649
+ENSG00000000005               0               0               0               0
+ENSG00000000419            1871            1075            1356            1273
+                KK_5_sorted.bam KK_6_sorted.bam KK_7_sorted.bam KK_8_sorted.bam
+ENSG00000000003             467             705             708             678
+ENSG00000000005               0               0               0               0
+ENSG00000000419            1168            1667            1077            1303
+                KK_9_sorted.bam NK_1_sorted.bam NK_2_sorted.bam NK_3_sorted.bam
+ENSG00000000003             657             804            1060             710
+ENSG00000000005               0               0               0               0
+ENSG00000000419            1125            1138            1886            1277
+                NK_4_sorted.bam NK_5_sorted.bam NK_6_sorted.bam NK_7_sorted.bam
+ENSG00000000003             695             526             801             697
+ENSG00000000005               0               0               0               0
+ENSG00000000419            1709            1374            1573            1297
+                NK_8_sorted.bam
+ENSG00000000003             566
+ENSG00000000005               0
+ENSG00000000419            1352
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph")
+> write.csv(assay(se), file = "counts_keratinocytes.csv")
+> colSums(assay(se))
+KK_1_sorted.bam KK_2_sorted.bam KK_3_sorted.bam KK_4_sorted.bam KK_5_sorted.bam 
+       43191085        31219876        35213471        36358449        29787415 
+KK_6_sorted.bam KK_7_sorted.bam KK_8_sorted.bam KK_9_sorted.bam NK_1_sorted.bam 
+       30204133        30011811        31085681        29228058        31602020 
+NK_2_sorted.bam NK_3_sorted.bam NK_4_sorted.bam NK_5_sorted.bam NK_6_sorted.bam 
+       40163763        33218642        32402951        30693623        33785253 
+NK_7_sorted.bam NK_8_sorted.bam 
+       30324574        31844301 
+> rowRanges(se)
+GRangesList object of length 60683:
+$ENSG00000000003
+GRanges object with 20 ranges and 2 metadata columns:
+       seqnames              ranges strand |   exon_id       exon_name
+          <Rle>           <IRanges>  <Rle> | <integer>     <character>
+   [1]        X 100627108-100629986      - |    739975 ENSE00001459322
+   [2]        X 100627109-100629986      - |    739976 ENSE00003730948
+   [3]        X 100630759-100630866      - |    739977 ENSE00000868868
+   [4]        X 100632063-100632068      - |    739978 ENSE00003731560
+   [5]        X 100632485-100632568      - |    739979 ENSE00000401072
+   ...      ...                 ...    ... .       ...             ...
+  [16]        X 100635558-100635746      - |    739990 ENSE00003733424
+  [17]        X 100636191-100636689      - |    739991 ENSE00001886883
+  [18]        X 100636608-100636806      - |    739992 ENSE00001855382
+  [19]        X 100636793-100637104      - |    739993 ENSE00001863395
+  [20]        X 100639945-100639991      - |    739994 ENSE00001828996
+  -------
+  seqinfo: 47 sequences from an unspecified genome; no seqlengths
+
+...
+<60682 more elements>
+> str(metadata(rowRanges(se)))
+List of 1
+ $ genomeInfo:List of 15
+  ..$ Db type                                 : chr "TxDb"
+  ..$ Supporting package                      : chr "GenomicFeatures"
+  ..$ Data source                             : chr "/data2/zhenjun/keloid_keratinocytes/second_dataset/Samtools/sorted/Homo_sapiens.GRCh38.100.gtf"
+  ..$ Organism                                : chr NA
+  ..$ Taxonomy ID                             : chr NA
+  ..$ miRBase build ID                        : chr NA
+  ..$ Genome                                  : chr NA
+  ..$ transcript_nrow                         : chr "227954"
+  ..$ exon_nrow                               : chr "747775"
+  ..$ cds_nrow                                : chr "275213"
+  ..$ Db created by                           : chr "GenomicFeatures package from Bioconductor"
+  ..$ Creation time                           : chr "2021-01-04 12:27:15 +0800 (Mon, 04 Jan 2021)"
+  ..$ GenomicFeatures version at creation time: chr "1.38.0"
+  ..$ RSQLite version at creation time        : chr "2.1.2"
+  ..$ DBSCHEMAVERSION                         : chr "1.2"
+> colData(se)
+DataFrame with 17 rows and 0 columns
+> colData(se) <- DataFrame(sampleTable)
+> colData(se)
+DataFrame with 17 rows and 9 columns
+     SampleName CellType SampleID      Sex BodySite          Enthnicity
+       <factor> <factor> <factor> <factor> <factor>            <factor>
+KK_1    AN08_KK   Keloid     KK_1     Male      Ear           Caucasian
+KK_2    MN01_KK   Keloid     KK_2   Female Shoulder           EastAsian
+KK_3  MaMa18_KK   Keloid     KK_3   Female    Chest      AfricaAmerican
+KK_4    WK16_KK   Keloid     KK_4     Male    Chest           EastAsian
+KK_5    KC10_KK   Keloid     KK_5     Male    Chest Caucasian_EastAsian
+...         ...      ...      ...      ...      ...                 ...
+NK_4    ClRi NK   Normal     NK_4   Female  Abdomen           Caucasian
+NK_5   ChrCr NK   Normal     NK_5   Female  Abdomen           Caucasian
+NK_6    LeHa NK   Normal     NK_6   Female   Breast           Caucasian
+NK_7    EvMa NK   Normal     NK_7   Female  Abdomen           Caucasian
+NK_8    PaLa NK   Normal     NK_8   Female  Abdomen           Caucasian
+           Age AgeFactor    Batch
+     <integer>  <factor> <factor>
+KK_1        42       40s    First
+KK_2        40       40s    First
+KK_3        27       20s    First
+KK_4        29       20s    First
+KK_5        21       20s    First
+...        ...       ...      ...
+NK_4        52       50s   Second
+NK_5        37       30s   Second
+NK_6        54       50s   Second
+NK_7        38       30s   Second
+NK_8        76       70s   Second
+> library(DESeq2)
+> dds <- DESeqDataSet(se, design = ~ BodySite + Enthnicity + AgeFactor + Sex + Batch + CellType)
+Error in checkFullRank(modelMatrix) : 
+  the model matrix is not full rank, so the model cannot be fit as specified.
+  One or more variables or interaction terms in the design formula are linear
+  combinations of the others and must be removed.
+
+  Please read the vignette section 'Model matrix not full rank':
+
+  vignette('DESeq2')
+> dds <- DESeqDataSet(se, design = ~ Enthnicity + AgeFactor + Sex + Batch + CellType)
+> dds
+class: DESeqDataSet 
+dim: 60683 17 
+metadata(1): version
+assays(1): counts
+rownames(60683): ENSG00000000003 ENSG00000000005 ... ENSG00000288603
+  ENSG00000288604
+rowData names(0):
+colnames(17): KK_1 KK_2 ... NK_7 NK_8
+colData names(9): SampleName CellType ... AgeFactor Batch
+> dds$CellType <- relevel(dds$CellType, ref = "Normal")
+> dds$CellType
+ [1] Keloid Keloid Keloid Keloid Keloid Keloid Keloid Keloid Keloid Normal
+[11] Normal Normal Normal Normal Normal Normal Normal
+Levels: Normal Keloid
+> nrow(dds)
+[1] 60683
+> dds <- dds[ rowSums(counts(dds)) > 1, ]
+> nrow(dds)
+[1] 36745
+> seqnames(rowRanges(dds))
+RleList of length 36745
+$ENSG00000000003
+factor-Rle of length 20 with 1 run
+  Lengths: 20
+  Values :  X
+Levels(47): 1 2 3 4 5 ... KI270733.1 KI270734.1 KI270744.1 KI270750.1
+
+$ENSG00000000419
+factor-Rle of length 27 with 1 run
+  Lengths: 27
+  Values : 20
+Levels(47): 1 2 3 4 5 ... KI270733.1 KI270734.1 KI270744.1 KI270750.1
+
+$ENSG00000000457
+factor-Rle of length 30 with 1 run
+  Lengths: 30
+  Values :  1
+Levels(47): 1 2 3 4 5 ... KI270733.1 KI270734.1 KI270744.1 KI270750.1
+
+$ENSG00000000460
+factor-Rle of length 70 with 1 run
+  Lengths: 70
+  Values :  1
+Levels(47): 1 2 3 4 5 ... KI270733.1 KI270734.1 KI270744.1 KI270750.1
+
+$ENSG00000000938
+factor-Rle of length 24 with 1 run
+  Lengths: 24
+  Values :  1
+Levels(47): 1 2 3 4 5 ... KI270733.1 KI270734.1 KI270744.1 KI270750.1
+
+...
+<36740 more elements>
+> dds_sub <- dds[ all(!seqnames(dds) %in% c("X", "Y")), ]
+> nrow(dds_sub)
+[1] 35317
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove")
+> pdf("count distribution boxplots.pdf")
+> librarySizes_sub <- colSums(assay(dds_sub))
+> barplot(librarySizes_sub, names=names(librarySizes_sub), las=2, main="Barplot of library sizes")
+> abline(lty=2)
+> dev.off()
+null device 
+          1 
+> logcounts_sub <- log2(assay(dds_sub) + 1)
+> CellTypeCol <- as.numeric(factor(sampleTable$CellType)) + 1
+> pdf("log2 counts boxplots.pdf")
+> boxplot(logcounts_sub, xlab="", ylab="Log2(Counts)", las=2, col=CellTypeCol)
+> abline(h=median(as.matrix(logcounts_sub)), col="blue")
+> dev.off()
+null device 
+          1 
+> rld_sub <- rlog(dds_sub, blind = FALSE)
+> head(assay(rld_sub), 3)
+                     KK_1      KK_2      KK_3      KK_4      KK_5      KK_6
+ENSG00000000419 10.360667 10.164819 10.332034 10.240190 10.337945 10.629459
+ENSG00000000457  8.273417  8.187323  8.153900  8.094919  8.290501  8.077018
+ENSG00000000460  7.922657  7.200964  6.862965  6.465415  6.598237  8.214333
+                     KK_7      KK_8      KK_9      NK_1      NK_2      NK_3
+ENSG00000000419 10.385503 10.419261 10.311889 10.280484 10.646451 10.310165
+ENSG00000000457  8.237880  8.097036  8.050668  7.979975  8.020911  8.471634
+ENSG00000000460  6.875379  7.850437  7.517804  7.605478  7.389779  7.651844
+                     NK_4      NK_5      NK_6      NK_7      NK_8
+ENSG00000000419 10.572036 10.454188 10.488579 10.413332 10.395799
+ENSG00000000457  8.190378  8.173743  8.054896  8.150110  8.296787
+ENSG00000000460  8.639043  8.863729  8.283995  8.105817  8.097327
+> colData(rld_sub)
+DataFrame with 17 rows and 10 columns
+     SampleName CellType SampleID      Sex BodySite          Enthnicity
+       <factor> <factor> <factor> <factor> <factor>            <factor>
+KK_1    AN08_KK   Keloid     KK_1     Male      Ear           Caucasian
+KK_2    MN01_KK   Keloid     KK_2   Female Shoulder           EastAsian
+KK_3  MaMa18_KK   Keloid     KK_3   Female    Chest      AfricaAmerican
+KK_4    WK16_KK   Keloid     KK_4     Male    Chest           EastAsian
+KK_5    KC10_KK   Keloid     KK_5     Male    Chest Caucasian_EastAsian
+...         ...      ...      ...      ...      ...                 ...
+NK_4    ClRi NK   Normal     NK_4   Female  Abdomen           Caucasian
+NK_5   ChrCr NK   Normal     NK_5   Female  Abdomen           Caucasian
+NK_6    LeHa NK   Normal     NK_6   Female   Breast           Caucasian
+NK_7    EvMa NK   Normal     NK_7   Female  Abdomen           Caucasian
+NK_8    PaLa NK   Normal     NK_8   Female  Abdomen           Caucasian
+           Age AgeFactor    Batch        sizeFactor
+     <integer>  <factor> <factor>         <numeric>
+KK_1        42       40s    First   1.4343982838572
+KK_2        40       40s    First 0.988241923449603
+KK_3        27       20s    First  1.06728057016507
+KK_4        29       20s    First   1.0906410125937
+KK_5        21       20s    First 0.914350501628036
+...        ...       ...      ...               ...
+NK_4        52       50s   Second  1.08041549728179
+NK_5        37       30s   Second 0.967067963735883
+NK_6        54       50s   Second  1.07297169513736
+NK_7        38       30s   Second 0.947569001098683
+NK_8        76       70s   Second  1.00371459472334
+> rlogMat_sub <- assay(rld_sub)
+> rlogMat_sub <- limma::removeBatchEffect(rlogMat_sub, rld_sub$Batch)
+> assay(rld_sub) <- rlogMat_sub
+> head(assay(rld_sub), 3)
+                     KK_1      KK_2      KK_3      KK_4      KK_5      KK_6
+ENSG00000000419 10.394502 10.198653 10.365869 10.274024 10.371780 10.663293
+ENSG00000000457  8.256444  8.170350  8.136928  8.077946  8.273528  8.060046
+ENSG00000000460  8.380315  7.658622  7.320623  6.923073  7.055895  8.671991
+                     KK_7      KK_8      KK_9      NK_1      NK_2      NK_3
+ENSG00000000419 10.419337 10.385427 10.278054 10.314318 10.680285 10.344000
+ENSG00000000457  8.220907  8.114009  8.067640  7.963002  8.003939  8.454661
+ENSG00000000460  7.333038  7.392779  7.060145  8.063136  7.847437  8.109503
+                     NK_4      NK_5      NK_6      NK_7      NK_8
+ENSG00000000419 10.538201 10.420353 10.454745 10.379497 10.361965
+ENSG00000000457  8.207351  8.190715  8.071869  8.167083  8.313759
+ENSG00000000460  8.181384  8.406071  7.826337  7.648159  7.639668
+> pdf("rlog counts boxplots.pdf")
+> boxplot(assay(rld_sub), xlab="", ylab="rlog(Counts)", las=2, col=CellTypeCol)
+> abline(h=median(as.matrix(assay(rld_sub))), col="blue")
+> dev.off()
+null device 
+          1 
+> sampleDists_sub <- dist(t(assay(rld_sub)))
+> sampleDists_sub
+          KK_1      KK_2      KK_3      KK_4      KK_5      KK_6      KK_7
+KK_2  66.13090                                                            
+KK_3  77.72915  61.91429                                                  
+KK_4  68.79882  66.14107  66.53638                                        
+KK_5  71.35294  71.69163  75.57377  53.81354                              
+KK_6  83.66958  70.41822  75.83251  88.89232  91.70267                    
+KK_7  99.89396 101.12403  95.52642  90.60207  98.54943  94.24804          
+KK_8  78.09643  62.34259  60.28800  66.52889  68.33848  60.76183  71.62952
+KK_9  71.19658  64.37104  62.36642  59.90579  66.43885  74.18608  67.08253
+NK_1  75.45038  55.41793  61.70718  75.63092  83.36816  63.29095  91.31911
+NK_2  97.13024  82.12544  81.92360  93.65983  91.16486  71.63495  86.45666
+NK_3  78.58582  59.22380  65.56966  77.67095  76.55899  73.66800 107.69388
+NK_4  64.34798  50.98114  67.54950  67.69052  69.67717  57.23038  93.86904
+NK_5  67.71295  50.89160  64.12120  68.08235  68.12706  59.37735  93.34939
+NK_6  64.14326  59.60356  54.91786  67.01022  73.16155  69.15851  86.30184
+NK_7  65.95091  56.53609  51.98301  60.32464  66.78305  79.25944  96.74078
+NK_8  60.32774  58.51391  62.53485  53.07391  57.41258  64.79126  74.50138
+          KK_8      KK_9      NK_1      NK_2      NK_3      NK_4      NK_5
+KK_2                                                                      
+KK_3                                                                      
+KK_4                                                                      
+KK_5                                                                      
+KK_6                                                                      
+KK_7                                                                      
+KK_8                                                                      
+KK_9  39.99107                                                            
+NK_1  60.75296  67.12378                                                  
+NK_2  59.64486  71.18943  73.15980                                        
+NK_3  66.58217  77.27498  66.01936  77.10653                              
+NK_4  60.45393  69.08417  48.85845  71.61539  56.56813                    
+NK_5  60.13682  71.06353  52.13621  66.61618  49.30151  43.25898          
+NK_6  67.29855  67.06587  58.93133  74.37030  64.04779  62.94241  59.17014
+NK_7  70.79955  72.71377  59.26476  81.84849  60.17060  61.40819  58.51652
+NK_8  53.61289  49.82174  62.07376  72.96617  67.21473  58.99087  56.93162
+          NK_6      NK_7
+KK_2                    
+KK_3                    
+KK_4                    
+KK_5                    
+KK_6                    
+KK_7                    
+KK_8                    
+KK_9                    
+NK_1                    
+NK_2                    
+NK_3                    
+NK_4                    
+NK_5                    
+NK_6                    
+NK_7  56.26406          
+NK_8  58.99383  62.00855
+> library(pheatmap)
+> library(RColorBrewer)
+> pdf("Heatmap of sample-to-sample distances using the rlog values.pdf")
+> sampleDistMatrix_sub <- as.matrix( sampleDists_sub )
+> rownames(sampleDistMatrix_sub) <- paste( rld_sub$SampleID, sep = " - " )
+> colnames(sampleDistMatrix_sub) <- paste( rld_sub$SampleID, sep = " - " )
+> colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+> pheatmap(sampleDistMatrix_sub, clustering_distance_rows = sampleDists_sub, clustering_distance_cols = sampleDists_sub, col = colors)
+> dev.off()
+null device 
+          1 
+> library(ggplot2)
+> pcaData_sub <- plotPCA(rld_sub, intgroup = c("CellType", "SampleID"), returnData = TRUE)
+> pcaData_sub
+            PC1         PC2       group CellType SampleID name
+KK_1  -4.075170  14.7042779 Keloid:KK_1   Keloid     KK_1 KK_1
+KK_2 -11.860545   2.5241831 Keloid:KK_2   Keloid     KK_2 KK_2
+KK_3  -1.334603   0.8273476 Keloid:KK_3   Keloid     KK_3 KK_3
+KK_4   8.522049  17.7214517 Keloid:KK_4   Keloid     KK_4 KK_4
+KK_5   5.254675  16.0609900 Keloid:KK_5   Keloid     KK_5 KK_5
+KK_6  -9.931619 -16.5320142 Keloid:KK_6   Keloid     KK_6 KK_6
+KK_7  38.323225  -5.3838803 Keloid:KK_7   Keloid     KK_7 KK_7
+KK_8   5.693983  -9.5637592 Keloid:KK_8   Keloid     KK_8 KK_8
+KK_9  17.540363  -1.9383125 Keloid:KK_9   Keloid     KK_9 KK_9
+NK_1  -7.698569  -4.6626097 Normal:NK_1   Normal     NK_1 NK_1
+NK_2   2.099923 -24.3076266 Normal:NK_2   Normal     NK_2 NK_2
+NK_3 -19.299367  -0.9521195 Normal:NK_3   Normal     NK_3 NK_3
+NK_4 -11.959167  -3.0477722 Normal:NK_4   Normal     NK_4 NK_4
+NK_5 -11.361244  -1.1536771 Normal:NK_5   Normal     NK_5 NK_5
+NK_6   2.378521   1.3532753 Normal:NK_6   Normal     NK_6 NK_6
+NK_7  -7.854258  11.1564505 Normal:NK_7   Normal     NK_7 NK_7
+NK_8   5.561802   3.1937952 Normal:NK_8   Normal     NK_8 NK_8
+> percentVar_sub <- round(100 * attr(pcaData_sub, "percentVar"))
+> pdf("PCA plot using the rlog values with custom ggplot2 code.pdf")
+> ggplot(pcaData_sub, aes(x = PC1, y = PC2, color = SampleID, shape = CellType)) + geom_point(size =3) + xlab(paste0("PC1: ", percentVar_sub[1], "% variance")) + ylab(paste0("PC2: ", percentVar_sub[2], "% variance")) + coord_fixed()
+> dev.off()
+null device 
+          1 
+> dds_sub <- DESeq(dds_sub)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+7 rows did not converge in beta, labelled in mcols(object)$betaConv. Use larger maxit argument with nbinomWaldTest
+> res_sub <- results(dds_sub)
+> res_sub
+log2 fold change (MLE): CellType Keloid vs Normal 
+Wald test p-value: CellType Keloid vs Normal 
+DataFrame with 35317 rows and 6 columns
+                        baseMean     log2FoldChange             lfcSE
+                       <numeric>          <numeric>         <numeric>
+ENSG00000000419 1356.80420053216  0.429281370705593 0.557448517044139
+ENSG00000000457 288.819832439356 -0.562965444583727 0.836498625229828
+ENSG00000000460 244.191402614205   1.80954119752414  1.09166165000347
+ENSG00000000938 3.41054087953692  -2.96767772785416  4.57407353171854
+ENSG00000000971 71.2179335269877   1.41032811994785  5.16320416648191
+...                          ...                ...               ...
+ENSG00000288593  0.1626109723606 -0.185471117181994  16.9102787813642
+ENSG00000288594 3.40863320768143   4.49155934517297  3.82871138601429
+ENSG00000288596  48.942101908358  0.832652452138996  1.35277728123128
+ENSG00000288598   7.064892051513  -3.82497271990824  3.49768325545839
+ENSG00000288602  0.1765154951553 -0.597704818659698  17.0321438331625
+                               stat             pvalue              padj
+                          <numeric>          <numeric>         <numeric>
+ENSG00000000419   0.770082541401042  0.441250931548042 0.999961462327892
+ENSG00000000457  -0.673002235274508   0.50094586886064 0.999961462327892
+ENSG00000000460     1.6576026074731 0.0973977030382979 0.724669912526328
+ENSG00000000938  -0.648804114598298  0.516464997598062                NA
+ENSG00000000971    0.27314978731682  0.784738076573505 0.999961462327892
+...                             ...                ...               ...
+ENSG00000288593 -0.0109679514796876  0.991249016302404                NA
+ENSG00000288594    1.17312560084313  0.240745441551895                NA
+ENSG00000288596   0.615513332232434  0.538215767403554 0.999961462327892
+ENSG00000288598   -1.09357321419516  0.274142202318786                NA
+ENSG00000288602 -0.0350927531210683  0.972005780026344                NA
+> summary(res_sub)
+
+out of 35317 with nonzero total read count
+adjusted p-value < 0.1
+LFC > 0 (up)       : 191, 0.54%
+LFC < 0 (down)     : 207, 0.59%
+outliers [1]       : 0, 0%
+low counts [2]     : 18487, 52%
+(mean count < 11)
+[1] see 'cooksCutoff' argument of ?results
+[2] see 'independentFiltering' argument of ?results
+
+> sum(res_sub$padj < 0.1, na.rm=TRUE)
+[1] 398
+> res05_sub <- results(dds_sub, alpha=0.05)
+> summary(res05_sub)
+
+out of 35317 with nonzero total read count
+adjusted p-value < 0.05
+LFC > 0 (up)       : 128, 0.36%
+LFC < 0 (down)     : 133, 0.38%
+outliers [1]       : 0, 0%
+low counts [2]     : 18487, 52%
+(mean count < 11)
+[1] see 'cooksCutoff' argument of ?results
+[2] see 'independentFiltering' argument of ?results
+
+> sum(res05_sub$padj < 0.05, na.rm=TRUE)
+[1] 261
+> library(AnnotationDbi)
+> library(org.Hs.eg.db)
+
+> columns(org.Hs.eg.db)
+ [1] "ACCNUM"       "ALIAS"        "ENSEMBL"      "ENSEMBLPROT"  "ENSEMBLTRANS"
+ [6] "ENTREZID"     "ENZYME"       "EVIDENCE"     "EVIDENCEALL"  "GENENAME"    
+[11] "GO"           "GOALL"        "IPI"          "MAP"          "OMIM"        
+[16] "ONTOLOGY"     "ONTOLOGYALL"  "PATH"         "PFAM"         "PMID"        
+[21] "PROSITE"      "REFSEQ"       "SYMBOL"       "UCSCKG"       "UNIGENE"     
+[26] "UNIPROT"     
+> res_sub$symbol <- mapIds(org.Hs.eg.db, keys=row.names(res_sub), column="SYMBOL", keytype="ENSEMBL", multiVals="first")
+'select()' returned 1:many mapping between keys and columns
+> res_sub$entrez <- mapIds(org.Hs.eg.db, keys=row.names(res_sub), column="ENTREZID", keytype="ENSEMBL", multiVals="first")
+'select()' returned 1:many mapping between keys and columns
+> res_sub$genename <- mapIds(org.Hs.eg.db, keys=row.names(res_sub), column="GENENAME", keytype="ENSEMBL", multiVals="first")
+'select()' returned 1:many mapping between keys and columns
+> resOrdered_sub <- res_sub[order(res_sub$pvalue),]
+> head(resOrdered_sub)
+log2 fold change (MLE): CellType Keloid vs Normal 
+Wald test p-value: CellType Keloid vs Normal 
+DataFrame with 6 rows and 9 columns
+                        baseMean    log2FoldChange             lfcSE
+                       <numeric>         <numeric>         <numeric>
+ENSG00000119922 253.159988529289  11.9541513748545   1.7131765522036
+ENSG00000250742 277.177491686343   7.3480645145755  1.10574428725925
+ENSG00000135318 7605.39259330591  6.94661213561957  1.05030450696556
+ENSG00000010704 276.715326843263  3.87057892732454 0.627482465637541
+ENSG00000115844 242.035796167824 -7.49610043536738  1.22758495430371
+ENSG00000105137 417.528588373989  6.43944816885239  1.07213125976189
+                             stat               pvalue                 padj
+                        <numeric>            <numeric>            <numeric>
+ENSG00000119922  6.97776966389029 2.99902807970563e-12 5.04736425814457e-08
+ENSG00000250742  6.64535607304722 3.02484914552901e-11 2.09991865747903e-07
+ENSG00000135318    6.613903005795 3.74317051244034e-11 2.09991865747903e-07
+ENSG00000010704  6.16842563623179 6.89732738857962e-10 2.90205049874487e-06
+ENSG00000115844 -6.10638018092945  1.0191608100488e-09 3.43049528662427e-06
+ENSG00000105137  6.00621249517764 1.89907265199463e-09 5.32689878884495e-06
+                     symbol      entrez
+                <character> <character>
+ENSG00000119922       IFIT2        3433
+ENSG00000250742   LINC02381      400043
+ENSG00000135318        NT5E        4907
+ENSG00000010704         HFE        3077
+ENSG00000115844        DLX2        1746
+ENSG00000105137       SYDE1       85360
+                                                                   genename
+                                                                <character>
+ENSG00000119922 interferon induced protein with tetratricopeptide repeats 2
+ENSG00000250742                 long intergenic non-protein coding RNA 2381
+ENSG00000135318                                        5'-nucleotidase ecto
+ENSG00000010704                                  homeostatic iron regulator
+ENSG00000115844                                      distal-less homeobox 2
+ENSG00000105137                      synapse defective Rho GTPase homolog 1
+> resOrderedDF_sub <- as.data.frame(resOrdered_sub)
+> write.csv(resOrderedDF_sub, file = "result_all.csv")
+> resSig15_sub <- subset(resOrdered_sub, padj < 0.05 & abs(log2FoldChange) > 1.5)
+> write.csv(as.data.frame(resSig15_sub), file = "result_sig_FC15.csv")
+> resSig1_sub <- subset(resOrdered_sub, padj < 0.05 & abs(log2FoldChange) > 1)
+> write.csv(as.data.frame(resSig1_sub), file = "result_sig_FC1.csv")
+> library(genefilter)
+
+Attaching package: ‘genefilter’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    rowSds, rowVars
+
+> topVarGenes_sub <- head(order(rowVars(assay(rld_sub)), decreasing = TRUE), 1000)
+> mat_sub <- assay(rld_sub)[ topVarGenes_sub, ]
+> mat_sub <- mat_sub - rowMeans(mat_sub)
+> anno_sub <- as.data.frame(colData(rld_sub)[, c("CellType", "SampleID")])
+> pdf("Top 1000 variable genes across samples pheatmap.pdf")
+> pheatmap(mat_sub, fontsize_row = 4, scale = "row", color = colorRampPalette(c("green","black","red"))(1000), annotation_col = anno_sub)
+> dev.off()
+null device 
+          1 
+> matSig15_sub <- assay(rld_sub[row.names(resSig15_sub)])
+> pdf("significant genes across samples pheatmap FC15.pdf")
+> pheatmap(matSig15_sub, fontsize_row = 4, scale = "row", color = colorRampPalette(rev(brewer.pal(11, "RdBu")))(255), annotation_col = anno_sub)
+> dev.off()
+null device 
+          1 
+> library(apeglm)
+> pdf("mean of normalizad counts.pdf")
+> plotMA(res_sub, ylim=c(-5,5))
+> dev.off()
+null device 
+          1 
+> resultsNames(dds_sub)
+ [1] "Intercept"                                       
+ [2] "Enthnicity_Caucasian_vs_AfricaAmerican"          
+ [3] "Enthnicity_Caucasian_EastAsian_vs_AfricaAmerican"
+ [4] "Enthnicity_EastAsian_vs_AfricaAmerican"          
+ [5] "AgeFactor_30s_vs_20s"                            
+ [6] "AgeFactor_40s_vs_20s"                            
+ [7] "AgeFactor_50s_vs_20s"                            
+ [8] "AgeFactor_70s_vs_20s"                            
+ [9] "Sex_Male_vs_Female"                              
+[10] "Batch_Second_vs_First"                           
+[11] "CellType_Keloid_vs_Normal"                       
+> reslfc_sub <- lfcShrink(dds_sub, coef="CellType_Keloid_vs_Normal", type="apeglm")
+using 'apeglm' for LFC shrinkage. If used in published research, please cite:
+    Zhu, A., Ibrahim, J.G., Love, M.I. (2018) Heavy-tailed prior distributions for
+    sequence count data: removing the noise and preserving large differences.
+    Bioinformatics. https://doi.org/10.1093/bioinformatics/bty895
+> pdf("mean of normalizad counts lfcShrink.pdf")
+> plotMA(reslfc_sub, ylim=c(-5,5))
+> dev.off()
+null device 
+          1 
+> library(ggplot2)
+> library(ggrepel)
+> resdata15_sub <- as.data.frame(res_sub)
+> resdata15_sub <- na.omit(resdata15_sub)
+> resdata15_sub$Threshold = as.factor(ifelse(resdata15_sub$padj < 0.05 & abs(resdata15_sub$log2FoldChange) > 1.5, ifelse(resdata15_sub$log2FoldChange> 1.5 ,'Up','Down'),'Nonsignificant'))
+> p1_15_sub <- ggplot(resdata15_sub, aes(x = log2FoldChange, y = -log10(padj), color = Threshold, label=symbol)) + geom_point(size = 1.5, alpha = 0.4) + labs(x = "log2FoldChange", y = "-log10(padj)") + geom_text_repel(data = subset(resdata15_sub, resdata15_sub$padj < 0.0001 & abs(resdata15_sub$log2FoldChange)>= 10), aes(label = symbol), size = 3, box.padding = unit(0.5, "lines"), point.padding = unit(0.8, "lines"), segment.color = "black", show.legend = FALSE )
+> p2_15_sub <- p1_15_sub + geom_vline(xintercept = c(-1.5, 1.5), color = 'black', linetype = 2, size = 0.5) +  geom_hline(yintercept = -log10(0.05), color = 'black', linetype = 2, size = 0.5)
+> p2_15_sub
+> pdf("volcano plot FC15.pdf")
+> p2_15_sub
+> dev.off()
+null device 
+          1 
+
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove")
+> siggene <- read.csv(file="result_sig_FC15.csv")
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> siggene <- filter(siggene, entrez != "NA")
+> siggene <- siggene[which(duplicated(siggene$symbol) == F), ] 
+> geneList <- siggene[,3]
+> names(geneList) <- as.character(siggene[,9])
+> geneList <- sort(geneList, decreasing = TRUE)
+> require(DOSE)
+Loading required package: DOSE
+
+DOSE v3.12.0  For help: https://guangchuangyu.github.io/software/DOSE
+
+If you use DOSE in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Guang-Rong Yan, Qing-Yu He. DOSE: an R/Bioconductor package for Disease Ontology Semantic and Enrichment analysis. Bioinformatics 2015, 31(4):608-609
+
+> library(clusterProfiler)
+Registered S3 method overwritten by 'enrichplot':
+  method               from
+  fortify.enrichResult DOSE
+clusterProfiler v3.14.3  For help: https://guangchuangyu.github.io/software/clusterProfiler
+
+If you use clusterProfiler in published research, please cite:
+Guangchuang Yu, Li-Gen Wang, Yanyan Han, Qing-Yu He. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology. 2012, 16(5):284-287.
+> library(org.Hs.eg.db)
+Loading required package: AnnotationDbi
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:dplyr’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: IRanges
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:dplyr’:
+
+    first, rename
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘IRanges’
+
+The following objects are masked from ‘package:dplyr’:
+
+    collapse, desc, slice
+
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+
+> require(Rgraphviz)
+Loading required package: Rgraphviz
+Loading required package: graph
+Loading required package: grid
+
+Attaching package: ‘Rgraphviz’
+
+The following objects are masked from ‘package:IRanges’:
+
+    from, to
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    from, to
+
+> library(enrichplot)
+> library(stringr)
+
+Attaching package: ‘stringr’
+
+The following object is masked from ‘package:graph’:
+
+    boundary
+
+> library(ggplot2)
+> library(ggupset)
+> de <- names(geneList)
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove/ORA/GO")
+> ego <- enrichGO(de, OrgDb = org.Hs.eg.db, keyType = "ENTREZID", ont = "ALL", pAdjustMethod = "BH", pvalueCutoff = 1, qvalueCutoff = 1, readable = TRUE)
+> egorder <- ego[order(ego$pvalue), asis = T]
+> write.csv(as.data.frame(egorder),"GO enrich.csv",row.names =F)
+> ego_sig <- ego[ego$pvalue < 0.05, asis = T]
+> egorder_sig <- ego_sig[order(ego_sig$pvalue), asis = T]
+> write.csv(as.data.frame(egorder_sig),"GO enrich sig.csv",row.names =F)
+> pdf("TOP 10 GO dotplot.pdf", useDingbats = FALSE)
+> dotplot(ego_sig, x = "GeneRatio", title = "Gene Ontology", showCategory = 10, font.size = 6, split = "ONTOLOGY") + facet_grid(ONTOLOGY~., scale ="free") + scale_y_discrete(labels=function(ego_sig) str_wrap(ego_sig, width = 35)) + scale_size(range=c(2, 5))
+wrong orderBy parameter; set to default `orderBy = "x"`
+Scale for 'size' is already present. Adding another scale for 'size', which
+will replace the existing scale.
+> dev.off()
+null device 
+          1 
+> pdf("TOP 10 GO dotplot.pdf", useDingbats = FALSE)
+> dotplot(ego_sig, color = "pvalue", x = "GeneRatio", title = "Gene Ontology", showCategory = 10, font.size = 6, split = "ONTOLOGY") + facet_grid(ONTOLOGY~., scale ="free") + scale_y_discrete(labels=function(ego_sig) str_wrap(ego_sig, width = 35)) + scale_size(range=c(2, 5))
+wrong orderBy parameter; set to default `orderBy = "x"`
+Scale for 'size' is already present. Adding another scale for 'size', which
+will replace the existing scale.
+> dev.off()
+null device 
+          1 
+> pdf("TOP 30 GO dotplot.pdf", useDingbats = FALSE)
+> dotplot(egorder_sig, color = "pvalue", x = "GeneRatio", title = "Gene Ontology", showCategory = 30, font.size = 6) + scale_y_discrete(labels=function(egorder_sig) str_wrap(egorder_sig, width = 35)) + scale_size(range=c(2, 5))
+wrong orderBy parameter; set to default `orderBy = "x"`
+Scale for 'size' is already present. Adding another scale for 'size', which
+will replace the existing scale.
+> dev.off()
+null device 
+          1 
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove/ORA/GO/CC")
+> ego_CC <- enrichGO(de, OrgDb = org.Hs.eg.db, keyType = "ENTREZID", ont = "CC", pAdjustMethod = "BH", pvalueCutoff = 1, qvalueCutoff = 1, readable = TRUE)
+> write.csv(as.data.frame(ego_CC),"GO enrich CC.csv",row.names =F)
+> ego_CC_sig <- ego_CC[ego_CC$pvalue < 0.05, asis = T]
+> write.csv(as.data.frame(ego_CC_sig),"GO enrich CC sig.csv",row.names =F)
+> pdf("TOP 10 GO CC dotplot.pdf", useDingbats = FALSE)
+> dotplot(ego_CC_sig, color = "pvalue", x = "Count", title = "GO Cellular Component", showCategory = 10, font.size = 12) + scale_y_discrete(labels=function(ego_CC_sig) str_wrap(ego_CC_sig, width = 35))
+wrong orderBy parameter; set to default `orderBy = "x"`
+> dev.off()
+null device 
+          1 
+> pdf("TOP 10 GO CC gene concept network.pdf", useDingbats = FALSE)
+> cnetplot(ego_CC_sig, categorySize="pvalue", showCategory = 10, foldChange=geneList)
+> dev.off()
+null device 
+          1 
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove/ORA/GO/BP")
+> ego_BP <- enrichGO(de, OrgDb = org.Hs.eg.db, keyType = "ENTREZID", ont = "BP", pAdjustMethod = "BH", pvalueCutoff = 1, qvalueCutoff = 1, readable = TRUE)
+> write.csv(as.data.frame(ego_BP),"GO enrich BP.csv",row.names =F)
+> ego_BP_sig <- ego_BP[ego_BP$pvalue < 0.05, asis = T]
+> write.csv(as.data.frame(ego_BP_sig),"GO enrich BP sig.csv",row.names =F)
+> pdf("TOP 10 GO BP dotplot.pdf", useDingbats = FALSE)
+> dotplot(ego_BP_sig, color = "pvalue", x = "Count", title = "GO Biological Process", showCategory = 10, font.size = 12) + scale_y_discrete(labels=function(ego_BP_sig) str_wrap(ego_BP_sig, width = 35)) + scale_size(range=c(2, 7))
+wrong orderBy parameter; set to default `orderBy = "x"`
+Scale for 'size' is already present. Adding another scale for 'size', which
+will replace the existing scale.
+> dev.off()
+null device 
+          1 
+> pdf("TOP 10 GO BP gene concept network.pdf", useDingbats = FALSE)
+> cnetplot(ego_BP_sig, categorySize="pvalue", showCategory = 10, foldChange=geneList)
+> dev.off()
+null device 
+          1 
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove/ORA/GO/MF")
+> ego_MF <- enrichGO(de, OrgDb = org.Hs.eg.db, keyType = "ENTREZID", ont = "MF", pAdjustMethod = "BH", pvalueCutoff = 1, qvalueCutoff = 1, readable = TRUE)
+> write.csv(as.data.frame(ego_MF),"GO enrich MF.csv",row.names =F)
+> ego_MF_sig <- ego_MF[ego_MF$pvalue < 0.05, asis = T]
+> write.csv(as.data.frame(ego_MF_sig),"GO enrich MF sig.csv",row.names =F)
+> pdf("TOP 10 GO MF dotplot.pdf", useDingbats = FALSE)
+> dotplot(ego_MF_sig, color = "pvalue", x = "Count", title = "GO Molecular Function", showCategory = 10, font.size = 12) + scale_y_discrete(labels=function(ego_MF_sig) str_wrap(ego_MF_sig, width = 35))
+wrong orderBy parameter; set to default `orderBy = "x"`
+> dev.off()
+null device 
+          1 
+> pdf("TOP 10 GO MF gene concept network.pdf", useDingbats = FALSE)
+> cnetplot(ego_MF_sig, categorySize="pvalue", showCategory = 10, foldChange=geneList)
+> dev.off()
+null device 
+          1 
+> setwd("/data2/zhenjun/keloid_keratinocytes/second_dataset/Graph/xyremove/ORA/KEGG")
+> kk <- enrichKEGG(de, organism="hsa", pvalueCutoff=1, pAdjustMethod="BH", qvalueCutoff=1)
+> kk <- setReadable(kk, OrgDb = org.Hs.eg.db, keyType="ENTREZID")
+> kk_sig <- kk[kk$pvalue < 0.05, asis = T]
+> write.csv(as.data.frame(kk),"KEGG enrichment.csv",row.names =F)
+> write.csv(as.data.frame(kk_sig),"KEGG enrichment sig.csv",row.names =F)
+> pdf("enrichKEGG barplot.pdf", useDingbats = FALSE)
+> barplot(kk_sig, color = "pvalue", showCategory = 29, title = "KEGG Enrichment Pathways")
+> dev.off()
+null device 
+          1 
